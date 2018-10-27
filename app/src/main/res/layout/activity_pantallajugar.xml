@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pantallajugar">
+
+    <TextView
+        android:id="@+id/txtnombrejugador"
+        android:layout_width="134dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="16dp"
+        android:hint="Nombre jugador"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/idpuntos"
+        android:layout_width="92dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="77dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:text="puntaje :"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="16dp"
+        android:text="!!Juego iniciado!!"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/idfinalizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:text="Finalizar partida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="50dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="32dp"
+        android:text="CPU"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idpuntos" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="8dp"
+        android:text="VS"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idopcionpc" />
+
+    <Button
+        android:id="@+id/btnpiedra"
+        android:layout_width="102dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:onClick="eventopiedra"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnombrejugador" />
+
+    <Button
+        android:id="@+id/btnpapel"
+        android:layout_width="93dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:onClick="eventopapel"
+        android:text="[_]"
+        app:layout_constraintStart_toEndOf="@+id/btnpiedra"
+        app:layout_constraintTop_toBottomOf="@+id/txtnombrejugador" />
+
+    <Button
+        android:id="@+id/btntijera"
+        android:layout_width="89dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:onClick="eventotijera"
+        android:text="X"
+        app:layout_constraintStart_toEndOf="@+id/btnpapel"
+        app:layout_constraintTop_toBottomOf="@+id/txtnombrejugador" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:text="Ganes :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnpiedra" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:text="Perdidas :"
+        app:layout_constraintStart_toEndOf="@+id/idganados"
+        app:layout_constraintTop_toBottomOf="@+id/btnpapel" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:text="Empates :"
+        app:layout_constraintStart_toEndOf="@+id/idperdidos"
+        app:layout_constraintTop_toBottomOf="@+id/btntijera" />
+
+    <TextView
+        android:id="@+id/idganados"
+        android:layout_width="44dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="52dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/btnpiedra" />
+
+    <TextView
+        android:id="@+id/idperdidos"
+        android:layout_width="32dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="48dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/btnpapel" />
+
+    <TextView
+        android:id="@+id/idempatados"
+        android:layout_width="23dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="48dp"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/btntijera" />
+
+    <Button
+        android:id="@+id/idopcionpc"
+        android:layout_width="156dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="24dp"
+        android:text="ganare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+</android.support.constraint.ConstraintLayout>
